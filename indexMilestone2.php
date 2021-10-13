@@ -23,13 +23,22 @@
     <div id="root">
 
         <header>
+
             <img src="https://loghi-famosi.com/wp-content/uploads/2020/09/Logo-della-Spotify.png" alt="">
+
+            <form>
+                <select v-model="filterDisc" name="genre" id="genre">
+                    <option value="all">All</option>
+                    <option v-for="(genre) in listGenre" :value="genre">{{ genre }}</option>
+                </select>
+            </form>
+
         </header>
     
         <main>
     
             <div class="dischi">
-                <div v-for="(disco) in dischi" class="disco">
+                <div v-for="(disco) in filteredAlbumList" class="disco">
                     <img :src="disco.poster" alt=''>
                     <h3>{{ disco.title }}</h3>
                     <p>{{ disco.author }}</p>

@@ -18,6 +18,10 @@ header img {
     height: 50px;
 }
 
+form {
+    margin-right: 30px;
+}
+
 main {
     background-color: #1E2D3C;
     height: calc(100vh - 90px);
